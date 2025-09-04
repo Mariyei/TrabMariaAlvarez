@@ -8,7 +8,7 @@ Se dividen en tres carpetas, una para cada esquema de seguridad. Dentro de cada 
 
 - `Receptor-*.csv`: marcas de tiempo al recibir mensajes.
 
-- `Latencia-*.csv`: latencia obtenida a partir de los datos de emisor y receptor utilizando el script de Python `latencia_*.py`.
+- `Latencia-*.csv`: latencia obtenida a partir de los datos de emisor y receptor utilizando el script de Python `Latencia-*.py`.
 
 
 
