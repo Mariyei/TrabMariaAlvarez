@@ -2,13 +2,13 @@ En esta carpeta se encuentran los **datos** y **scripts** utilizados para analiz
 
 ## 📂 Datos Recopilados
 
-Se dividen en tres carpetas, una para cada esquema de seguridad. Dentro de cada una encontrarás:
+Se dividen en tres carpetas, una para cada esquema de seguridad. Dentro de cada una se encuentran os siguientes archivos:
 
-- `Emisor_*.csv`: marcas de tiempo al enviar mensajes.
+- `Emisor-*.csv`: marcas de tiempo al enviar mensajes.
 
-- `Receptor_*.csv`: marcas de tiempo al recibir mensajes.
+- `Receptor-*.csv`: marcas de tiempo al recibir mensajes.
 
-- `Latencia_*.csv`: latencia obtenida a partir de los datos de emisor y receptor utilizando el script de Python `latencia_*.py`.
+- `Latencia-*.csv`: latencia obtenida a partir de los datos de emisor y receptor utilizando el script de Python `latencia_*.py`.
 
 
 
@@ -16,13 +16,13 @@ Se dividen en tres carpetas, una para cada esquema de seguridad. Dentro de cada 
 
 Contiene los scripts de Python empleados para:
 
-- `latencia_*.py`: cálculo de la latencia a partir de los registros de emisor y receptor.
+- `Latencia-*.py`: cálculo de la latencia a partir de los registros de emisor y receptor.
 
-- `estadisticos_*.py`: cálculo de indicadores estadísticos (media, moda, percentiles, etc.).
+- `Estadisticos-*.py`: cálculo de indicadores estadísticos (media, moda, percentiles, etc.).
 
 
 
 ## Nota
 
-Los resultados finales no están incluidos aquí; únicamente los datos recopilados y los scripts necesarios para reproducir el análisis.
+Los resultados finales no están incluidos aquí; únicamente los datos recopilados y los scripts necesarios para obtener los resultados. 
 
