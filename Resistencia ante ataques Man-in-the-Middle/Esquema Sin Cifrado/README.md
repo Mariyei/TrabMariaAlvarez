@@ -33,13 +33,13 @@ Los comandos y configuraciones presentados en este repositorio tienen únicament
 
 ### Comando 1: `ip a`
 
-El comando `ip a` proporciona información sobre todas las interfaces disponibles en el sistema junto con sus direcciones IP y estado de conexión. Este paso permite ubicar la interfaz de red de la computadora, en este caso `**wlan0**`.
+El comando `ip a` proporciona información sobre todas las interfaces disponibles en el sistema junto con sus direcciones IP y estado de conexión. Este paso permite ubicar la interfaz de red de la computadora, en este caso `wlan0`.
 
 ![Comando 1](https://github.com/Mariyei/TrabMariaAlvarez/blob/main/Resistencia%20ante%20ataques%20Man-in-the-Middle/Esquema%20Sin%20Cifrado/Material%20visual/Comando%201.png)
 
 ### Comando 2: `iw dev wlan0 link`
 
-El comando `iw dev wlan0 link` muestra el estado de la interfaz `**wlan0**`, indicando a qué red Wi-Fi está conectada, la intensidad de la señal y la frecuencia de operación.  Estos datos son relevantes para el análisis de dispositivos IoT y su comunicación dentro de la red.
+El comando `iw dev wlan0 link` muestra el estado de la interfaz `wlan0`, indicando a qué red Wi-Fi está conectada, la intensidad de la señal y la frecuencia de operación.  Estos datos son relevantes para el análisis de dispositivos IoT y su comunicación dentro de la red.
 
 ![Comando 2](https://github.com/Mariyei/TrabMariaAlvarez/blob/main/Resistencia%20ante%20ataques%20Man-in-the-Middle/Esquema%20Sin%20Cifrado/Material%20visual/Comando%202.png)
 
