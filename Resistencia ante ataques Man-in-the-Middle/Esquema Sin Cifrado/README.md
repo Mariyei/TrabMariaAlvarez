@@ -74,8 +74,7 @@ Se realiza brevemente una revisión de paquetes capturados en Wireshark hasta el
 La imagen a continuación muestra que la dirección MAC de la parte emisora corresponde a `AC:15:18:D6:85:B0`. Se identifica fácilmente, debido a que la columna de `source` y `destination` de Wireshark, las muestran como `Espressif_X:X:X`, y se sabe que es la empresa productora de los `ESP32-WROOM-32`, lo que apunta directamente a los dispositivos. 
 
 - A continuación la captura de dirección MAC del emisor: 
-
-Insertar Imagen CapturadeMACEMISOR. 
+ 
 ![CapturadeMACEMISOR](https://github.com/Mariyei/TrabMariaAlvarez/blob/main/Resistencia%20ante%20ataques%20Man-in-the-Middle/Esquema%20Sin%20Cifrado/Material%20visual/CapturadeMACEMISOR.png)
 
 - En cambio, la dirección MAC del receptor, también localizada de la misma forma, corresponde a `34:5F:A9:B9:74`: 
