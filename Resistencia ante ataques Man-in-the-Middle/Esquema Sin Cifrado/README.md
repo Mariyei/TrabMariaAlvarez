@@ -45,13 +45,13 @@ El comando `iw dev wlan0 link` muestra el estado de la interfaz `wlan0`, indican
 
 ### Comando 3: `sudo airmon-ng start wlan0`
 
-El comando `sudo airmon-ng start wlan0` cambia la interfaz a **modo monitor**, lo que permite capturar tráfico inalámbrico en el aire. En este modo se observan paquetes intercambiados, intentos de conexión y actividad general de la red Wi-Fi. Al activarse, la interfaz se renombra como `**wlan0mon**`, y la computadora pierde conexión a internet temporalmente.
+El comando `sudo airmon-ng start wlan0` cambia la interfaz a **modo monitor**, lo que permite capturar tráfico inalámbrico en el aire. En este modo se observan paquetes intercambiados, intentos de conexión y actividad general de la red Wi-Fi. Al activarse, la interfaz se renombra como `wlan0mon`, y la computadora pierde conexión a internet temporalmente.
 
 ![Comando 3](https://github.com/Mariyei/TrabMariaAlvarez/blob/main/Resistencia%20ante%20ataques%20Man-in-the-Middle/Esquema%20Sin%20Cifrado/Material%20visual/Comando%203.png)
 
 Se verifica nuevamente con `ip a` que la interfaz cambió de nombre de `wlan0` a `wlan0mon`. Cabe mencionar que en este estado no es posible navegar por internet.
 
-![Comando 1-2-4](https://github.com/Mariyei/TrabMariaAlvarez/blob/main/Resistencia%20ante%20ataques%20Man-in-the-Middle/Esquema%20Sin%20Cifrado/Material%20visual/Comando%202.png)
+![Comando 1-2](https://github.com/Mariyei/TrabMariaAlvarez/blob/main/Resistencia%20ante%20ataques%20Man-in-the-Middle/Esquema%20Sin%20Cifrado/Material%20visual/Comando%201-2.png)
 
 Una vez realizado este proceso, se abre la aplicación Wireshark para comenzar la captura de tráfico en la interfaz en modo monitor. Puede abrirse desde consola con el comando `sudo wireshark`.
 
