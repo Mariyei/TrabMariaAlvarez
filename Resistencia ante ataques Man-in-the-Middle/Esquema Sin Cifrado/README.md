@@ -54,7 +54,7 @@ El comando `sudo airmon-ng start wlan0` cambia la interfaz a **modo monitor**, l
 
 Se verifica nuevamente con `ip a` que la interfaz cambió de nombre de `wlan0` a `wlan0mon`. Cabe mencionar que en este estado no es posible navegar por internet.
 
-![Comando 1-4](![Comando 2](https://github.com/Mariyei/TrabMariaAlvarez/blob/main/Resistencia%20ante%20ataques%20Man-in-the-Middle/Esquema%20Sin%20Cifrado/Material%20visual/Comando%202.png)
+![Comando 1-2-4](https://github.com/Mariyei/TrabMariaAlvarez/blob/main/Resistencia%20ante%20ataques%20Man-in-the-Middle/Esquema%20Sin%20Cifrado/Material%20visual/Comando%202.png)
 
 Una vez realizado este proceso, se abre la aplicación Wireshark para comenzar la captura de tráfico en la interfaz en modo monitor. Puede abrirse desde consola con el comando `sudo wireshark`.
 
@@ -68,7 +68,7 @@ Posteriormente, se utiliza el comando `sudo airodump-ng wlan0mon`, el cual inici
 
 En este caso, se localiza el router de la red doméstica, y algunos puntos hacia donde se dirige el tráfico. Inicialmente, presuntamente los dispositivos ESP32-WROOM-32. La dirección MAC del router corresponde al encuadre rojo señalado y oculto por temas de seguridad. 
 
-![Comando 2-5](https://github.com/Mariyei/TrabMariaAlvarez/blob/main/Resistencia%20ante%20ataques%20Man-in-the-Middle/Esquema%20Sin%20Cifrado/Material%20visual/Comando%202-5.png)
+![Comando 2-2-4](https://github.com/Mariyei/TrabMariaAlvarez/blob/main/Resistencia%20ante%20ataques%20Man-in-the-Middle/Esquema%20Sin%20Cifrado/Material%20visual/Comando%202-2-4.png)
 
 ##### Comando 5: 
 
@@ -89,32 +89,32 @@ Una vez que se tiene esta información, en la cual se extrae información sobre 
 
 Dicho comando nos proporciona información del tráfico que ocurre únicamente en el canal 6, reduciendo el ruido y mostrando únicamente las redes y dispositivos que operan en dicho canal. Facilita el análisis de paquetes. Se localizan los dos nodos, tanto el emisor como el receptor. 
 
-![Comando 6](https://github.com/Mariyei/TrabMariaAlvarez/blob/main/Resistencia%20ante%20ataques%20Man-in-the-Middle/Esquema%20Sin%20Cifrado/Material%20visual/Comando%206.png)
+![Comando 5](https://github.com/Mariyei/TrabMariaAlvarez/blob/main/Resistencia%20ante%20ataques%20Man-in-the-Middle/Esquema%20Sin%20Cifrado/Material%20visual/Comando%205.png)
 
 ##### Comando 6: 
 
 El comando `sudo aireplay-ng --deauth 10 -a <MAC ROUTER> -c <MAC DISPOSITIVO> wlan0mon` envía 10 paquetes de desautenticación al dispositivo objetivo.  
 Este procedimiento se aplicó tanto al emisor como al receptor.
 
-Insertar Imagen Comando 7
+![Comando 6](https://github.com/Mariyei/TrabMariaAlvarez/blob/main/Resistencia%20ante%20ataques%20Man-in-the-Middle/Esquema%20Sin%20Cifrado/Material%20visual/Comando%206.png)
 
 El resultado fue la desconexión de ambos dispositivos, lo que evidencia que no cuentan con mecanismos de protección frente a este tipo de ataques.  
 
 -Desconexión del emisor: 
 
-Insertar Imagen de Caída desde el emisor
+![Desconexion del emisor](https://github.com/Mariyei/TrabMariaAlvarez/blob/main/Resistencia%20ante%20ataques%20Man-in-the-Middle/Esquema%20Sin%20Cifrado/Material%20visual/Ca%C3%ADda%20desde%20el%20emisor.png)
 
 -Desconexión del receptor: 
 
-Insertar Imagen de Caída desde el receptor
+![Desconexion del receptor](https://github.com/Mariyei/TrabMariaAlvarez/blob/main/Resistencia%20ante%20ataques%20Man-in-the-Middle/Esquema%20Sin%20Cifrado/Material%20visual/Ca%C3%ADda%20desde%20el%20receptor.png)
 
 En Wireshark se observa la interrupción de la conexión.
 
-Insertar Imagen ProcesoDeAuth
+![Desconexion en Wireshark](https://github.com/Mariyei/TrabMariaAlvarez/blob/main/Resistencia%20ante%20ataques%20Man-in-the-Middle/Esquema%20Sin%20Cifrado/Material%20visual/ProcesodeDeAuth.png)
 
 Posteriormente, al restablecerse la comunicación, se captura el handshake WPA2 y fue posible confirmar que los paquetes transmitidos por los dispositivos ESP32-WROOM-32 viajaban en **texto plano sobre el puerto TCP 1883 (protocolo MQTT)**.
 
-Insertar Imagen de Intercambiodehanshakedelosdispositivos 
+![Intercambiodehanshakedelosdispositivos](https://github.com/Mariyei/TrabMariaAlvarez/blob/main/Resistencia%20ante%20ataques%20Man-in-the-Middle/Esquema%20Sin%20Cifrado/Material%20visual/Intercambiodehandshakedelosdispositivos.png)
 
 Finalmente se analizan los paquetes recopilados y la información extraída de los paquetes. Esta información se presenta directamente en el documento del trabajo de graduación. 
 
@@ -122,7 +122,7 @@ Finalmente se analizan los paquetes recopilados y la información extraída de l
 
 Finalmente, para detener el modo monitor de la interfaz, se detienen los procesos y se aplican los comandos `sudo systemctl restart NetworkManager` y el comando `sudo airmon-ng stop wlan0mon`, lo que detiene el modo monitor y lo pasa a modo managed. Para comprobarlo, se usa el comando `ip a` y se verifica que la interfaz wlan0mon vuelve a wlan0, recuperando la conexión Wi-Fi. 
 
-Insertar Imagen Comando 8-9
+![Comando 7-8](https://github.com/Mariyei/TrabMariaAlvarez/blob/main/Resistencia%20ante%20ataques%20Man-in-the-Middle/Esquema%20Sin%20Cifrado/Material%20visual/Comando%207-8.png)
 
 
 
