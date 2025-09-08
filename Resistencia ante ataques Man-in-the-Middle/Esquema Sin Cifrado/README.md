@@ -1,10 +1,10 @@
-# Procedimiento realizado para las pruebas de resistencia ante ataque Man-in-the-Middle (MitM)
+# Procedimiento realizado para las pruebas de resistencia ante ataque Man-in-the-Middle (MitM) en esquema sin cifrado. 
 
 ## Configuraciones iniciales
 
 ### Sistema operativo: Kali Linux
 
-El entorno de Kali Linux fue seleccionado omo sistema operativo principal debido a que integra de forma nativa una amplia gama de herramientas y utilidades orientadas a la seguridad informática. Es ideal para realizar pruebas de penetración y mediciones de seguridad en sistemas y redes.
+El entorno de Kali Linux fue seleccionado como sistema operativo principal debido a que integra de forma nativa una amplia gama de herramientas y utilidades orientadas a la seguridad informática. Es ideal para realizar pruebas de penetración y mediciones de seguridad en sistemas y redes.
 
 Entre las herramientas disponibles por defecto se encuentran Wireshark y Scapy, ambas empleadas en el desarrollo de este trabajo. Además, ya se encuentran instaladas previamente en Kali Linux, no es necesario realizar configuraciones o instalaciones adicionales. 
 
