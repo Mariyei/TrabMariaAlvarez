@@ -16,10 +16,13 @@ Se dividen en tres carpetas, una para cada esquema de seguridad. Dentro de cada 
 
 Contiene los scripts de Python empleados para:
 
-- `latencia_*.py`: cálculo de la latencia a partir de los registros de emisor y receptor.
+- `Latencia_*.py`: cálculo de la latencia a partir de los registros de emisor y receptor.
 
-- `estadisticos_*.py`: cálculo de indicadores estadísticos (media, moda, percentiles, etc.).
+- `Estadisticos_*.py`: cálculo de indicadores estadísticos (media, moda, percentiles, etc.).
 
+- `AnalisisANOVA.py`: análisis de varianza (ANOVA) para comparar las diferencias de latencia entre los distintos esquemas de seguridad.
+
+- `AnalisisTStudent.py`: prueba t de Student para evaluar la significancia estadística entre pares de esquemas de seguridad.
 
 
 ## Nota

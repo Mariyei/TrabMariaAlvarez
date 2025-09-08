@@ -1,0 +1,4 @@
+Esquema,Media (mA),Mediana (mA),Moda (mA),Desv. Est.,Mínimo (mA),Máximo (mA),Min. estable (mA),P25 (mA),P75 (mA)
+Sin cifrado,79.753,73.1,71.7,20.245,48.2,175.6,69.8,71.6,75.2
+TLS,80.526,73.9,72.5,20.048,48.0,175.5,70.8,72.5,76.1
+AES+ECC,81.08,74.0,72.5,20.76,48.5,182.4,71.0,72.6,76.4
