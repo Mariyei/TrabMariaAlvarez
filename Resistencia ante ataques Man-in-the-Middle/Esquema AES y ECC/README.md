@@ -35,7 +35,7 @@ Para este caso, se obtienen las direcciones MAC desde el modo monitor y se verif
 
 Una diferencia es que para este esquema, los dispositivos se encuentran en el canal 1, a diferencia del esquema sin cifrado, que los dispositivos estaban en el canal 6 y en el esquema de TLS en el canal 11. 
 
-Luego, ejecutamos el comando `sudo airodump-ng --bssid <MAC DEL ROUTER> --channel 1 wlan0mon`, para únicamente recibir el tráfico en el canal 1. 
+Luego, ejecutamos el comando `sudo airodump-ng wlan0mon -c 1`, para únicamente recibir el tráfico en el canal 1. 
 
 ![Comando 4-3](https://github.com/Mariyei/TrabMariaAlvarez/blob/main/Resistencia%20ante%20ataques%20Man-in-the-Middle/Esquema%20AES%20y%20ECC/Material%20visual/Comando%204-3.png)
 
