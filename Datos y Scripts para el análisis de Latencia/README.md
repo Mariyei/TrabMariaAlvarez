@@ -20,6 +20,8 @@ Contiene los scripts de Python empleados para:
 
 - `Estadisticos_*.py`: cálculo de indicadores estadísticos (media, moda, percentiles, etc.).
 
+- `PruebaLeveneL.py`:ejecuta la prueba de Levene para verificar la homogeneidad de varianzas en los datos de latencia.
+
 - `AnalisisANOVA.py`: análisis de varianza (ANOVA) para comparar las diferencias de latencia entre los distintos esquemas de seguridad.
 
 - `AnalisisTStudent.py`: prueba t de Student para evaluar la significancia estadística entre pares de esquemas de seguridad.

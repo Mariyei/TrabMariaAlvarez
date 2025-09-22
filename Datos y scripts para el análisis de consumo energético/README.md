@@ -13,7 +13,13 @@ Se dividen en tres carpetas, una para cada esquema de seguridad. Dentro de cada 
 Contiene los scripts de Python utilizados: 
 - `StatsConsumoE.py`: realiza el cálculo de indicadores estadísticos (media, mediana, moda, etc.). 
 
-- `StatsmAhh.py`: realiza principalmente el gráfico acumulado de los miliamperios por hora consumidos por 10 minutos. 
+- `StatsmAh.py`: realiza principalmente el gráfico acumulado de los miliamperios por hora consumidos por 10 minutos. 
+
+- `PruebaLeneveCE.py`: ejecuta la prueba de Levene para verificar la homogeneidad de varianzas en los datos de consumo energético.
+
+- `AnalisisAnova.py`: aplica el análisis de varianza (ANOVA) para comparar el consumo entre los esquemas de seguridad.
+
+- `AnalisisTStudent.py`: realiza pruebas t de Student para contrastar diferencias de consumo entre pares de esquemas.
 
 ## 📂 Resultados obtenidos
 
